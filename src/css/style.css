@@ -1,0 +1,2063 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2020 Frenify
+/*	Author: Frenify
+/*	This file is made for CURRENT TEMPLATE
+
+
+01) BASE
+
+
+/*---------------------------------------------------*/
+/*	01) BASE
+/*---------------------------------------------------*/
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Muli";
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.8px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #fff;
+	color: #777;
+}
+.awilo_fn_svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+.awilo_fn_wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.awilo_fn_wrapper,
+.awilo_fn_wrapper *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.container.wide{
+	max-width: 1440px;
+}
+/*---------------------------------------------------*/
+/*	02) Start
+/*---------------------------------------------------*/
+body{
+	background-color: #0e0e0f;
+}
+.awilo_fn_content{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	transition: all .3s ease;
+	z-index: 5;
+}
+.awilo_fn_content section{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_abs_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* circle animation link */
+a.awilo_fn_circle_link{
+	position: relative;
+	transform: translateZ(0);
+}
+a.awilo_fn_circle_link:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: -2px;
+    left: 100%;
+    background-color: #ae45ff;
+	
+	-webkit-transition: left .5s ease,width .5s ease;
+	   -moz-transition: left .5s ease,width .5s ease;
+	    -ms-transition: left .5s ease,width .5s ease;
+	     -o-transition: left .5s ease,width .5s ease;
+	        transition: left .5s ease,width .5s ease;
+}
+a.awilo_fn_circle_link:hover:after{
+ width: 100%;
+    left: 0;
+	
+	-webkit-transition: width .5s ease;
+	   -moz-transition: width .5s ease;
+	    -ms-transition: width .5s ease;
+	     -o-transition: width .5s ease;
+	        transition: width .5s ease;
+}
+/*---------------------------------------------------*/
+/*	00) SIDEBAR HEADER
+/*---------------------------------------------------*/
+.awilo_fn_sidebar_header{
+	width: 400px;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: -400px;
+	background-color: #1e1427;
+	box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+	z-index: 100;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.awilo_fn_sidebar_header .closer{
+	position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 999;
+    background: rgba(255,255,255,.04);
+    border-radius: 3px;
+}
+.awilo_fn_sidebar_header .closer:after,
+.awilo_fn_sidebar_header .closer:before{
+	width: 14px;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -7px;
+}
+.awilo_fn_sidebar_header .closer:before{
+	transform: rotate(-45deg);
+}
+.awilo_fn_sidebar_header .header_inner{
+	width: 100%;
+    height: 100%;
+    clear: both;
+    float: left;
+}
+.awilo_fn_sidebar_header .menu_logo{
+	padding: 60px;
+}
+.awilo_fn_sidebar_header .menu_logo a{
+	text-decoration: none;
+}
+.awilo_fn_sidebar_header .menu_nav{
+	padding: 0px 60px 0px 60px;
+	height: calc(100vh - 165px - 148px);
+}
+.awilo_fn_sidebar_header .menu_nav > div{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.awilo_fn_sidebar_header .menu_nav > div > ul{
+	display: table-cell;
+	vertical-align: middle;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav{
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li{
+	margin: 0;
+	padding: 0;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li{
+	transform: translateY(20px);
+	opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li.fn_ready{
+	transform: translateY(0px);
+	opacity: 1;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a{
+	text-decoration: none;
+    color: #eee;
+    font-family: "Muli";
+    text-transform: capitalize;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    padding: 13px 0px;
+	font-size: 16px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:hover{
+	color: #ae45ff;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:before{
+	position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,.1);
+    left: 0px;
+    bottom: 0px;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li:last-child > a:before{display: none;}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:after{
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 1px;
+	background-color: rgba(255,255,255,.08);
+	right: 0px;
+	bottom: 0px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li:last-child > a:after{display: none;}
+.awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:hover:after{width: 100%;}
+.awilo_fn_sidebar_header ul.vert_nav li{
+	position: relative;
+}
+.awilo_fn_sidebar_header .menu_logo{
+	position: relative;
+	z-index: 10;
+}
+.awilo_fn_sidebar_header .social_list{
+	position: absolute;
+    right: 0px;
+	left: 0px;
+    bottom: 0px;
+    padding: 60px 60px 54px 60px;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: bottom 300ms linear;
+}
+.awilo_fn_sidebar_header .social_list ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: auto;
+	margin-left: -3px;
+}
+.awilo_fn_sidebar_header .social_list ul li{
+	list-style-type: none;
+	padding: 0;
+    margin: 5px 0px 5px 5px;
+    display: block;
+}
+.awilo_fn_sidebar_header .social_list ul li a{
+	text-decoration: none;
+	transition: all 300ms ease;
+	color: #eee;
+	font-size: 14px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+.awilo_fn_sidebar_header .social_list ul li a:hover{
+	color: #ae45ff;
+}
+/*---------------------------------------------------*/
+/*	00) HEADER
+/*---------------------------------------------------*/
+.awilo_fn_header{
+	width: 100%;
+    position: fixed;
+    z-index: 13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100px;
+    align-items: center;
+    padding: 5px 50px;
+}
+/*---------------------------------------------------*/
+/*	00) HAMBURGER
+/*---------------------------------------------------*/
+.hamburger {
+	padding: 0;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+
+
+.hamburger-box {
+	width: 30px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 30px;
+	height: 1px;
+	background-color: #eee;
+	border-radius: 0px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+
+.hamburger-inner::before {
+	top: -10px;
+}
+
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+.hamburger--spring .hamburger-inner {
+	top: 2px;
+	transition: background-color 0s 0.13s linear;
+}
+
+.hamburger--spring .hamburger-inner::before {
+	top: 6px;
+	transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring .hamburger-inner::after {
+	top: 12px;
+	transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring.is-active .hamburger-inner {
+	transition-delay: 0.22s;
+	background-color: transparent !important;
+}
+
+.hamburger--spring.is-active .hamburger-inner::before {
+	top: 0;
+	transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--spring.is-active .hamburger-inner::after {
+	top: 0;
+	transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+/*---------------------------------------------------*/
+/*	00) SIDEBAR HEADER ANIMATION
+/*---------------------------------------------------*/
+
+.awilo_fn_content,
+.awilo_fn_sidebar_header{
+	transition: all .5s ease;
+}
+.awilo_fn_wrapper.opened .awilo_fn_sidebar_header{
+	right: 0;
+}
+.awilo_fn_wrapper.opened .awilo_fn_content{
+	padding-right: 400px;
+}
+.awilo_fn_wrapper.opened .awilo_fn_sidebar_header,
+.awilo_fn_wrapper.opened .awilo_fn_content{
+	transition: all .5s .3s ease;
+}
+/*---------------------------------------------------*/
+/*	03) Shortcode: About
+/*---------------------------------------------------*/
+.awilo_fn_about{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_about .about_in{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.awilo_fn_about .about_left{
+	width: 50%;
+	padding-right: 7%;
+}
+.awilo_fn_about .about_left .l_inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+.awilo_fn_about .about_left h5{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #EDF4F5;
+	letter-spacing: 0;
+	font-family: 'Muli';
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.awilo_fn_about .about_left h3{
+	margin: 0;
+	padding: 0;
+	font-size: 72px;
+	line-height: 80px;
+	color: #EDF4F5;
+	letter-spacing: -0.25px;
+	font-family: 'Rubik';
+	font-weight: 400;
+	margin-bottom: 26px;
+}
+.awilo_fn_about .about_title{
+	margin-bottom: 20px;
+}
+.awilo_fn_about .about_left .about_desc p{
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	line-height: 30px;
+	color: #777;
+	font-family: 'Muli';
+}
+.awilo_fn_about .about_left .about_desc{
+	margin-bottom: 63px;
+}
+.awilo_fn_wrapper .awilo_fn_main_button{
+	margin: 0;
+	padding: 0;
+	outline-color: transparent;
+	outline-width: 0;
+	box-shadow: none;
+	border: none;
+	display: block;
+	float: left;
+	font-family: 'Muli';
+	text-decoration: none;
+	color: #EDF4F5;
+	font-size: 16px;
+	border-radius: 2px;
+	max-width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	perspective: 1000px;
+    transform: translateZ(0px);
+}
+.awilo_fn_wrapper .awilo_fn_main_button:hover{
+	border-color: transparent;
+}
+.awilo_fn_wrapper .awilo_fn_main_button span{
+	line-height: 48px;
+	display: block;
+	transition: all .4s ease;
+	float: left;
+	padding: 0 37px;
+	border: 2px solid gray;
+}
+.awilo_fn_wrapper .awilo_fn_main_button span:nth-child(1){
+	transition: all .4s .2s ease;
+}
+.awilo_fn_wrapper .awilo_fn_main_button span:nth-child(2){
+	opacity: 0;
+	transform: scale(0.8);
+	position: absolute;
+	top: 0;
+}
+.awilo_fn_wrapper .awilo_fn_main_button:hover span:nth-child(1){
+	opacity: 0;
+	transform: scale(.8);
+	transition: all .4s ease;
+}
+.awilo_fn_wrapper .awilo_fn_main_button:hover span:nth-child(2){
+	transform: scale(1) translateZ(0);
+	transition: all .4s .2s ease;
+	opacity: 1;
+}
+.awilo_fn_about .about_left .about_btn{
+	margin-bottom: 50px;
+}
+.awilo_fn_about .about_social ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.awilo_fn_about .about_social ul li{
+	float: left;
+	position: relative;
+	margin-right: 38px;
+}
+.awilo_fn_about .about_social ul li:after{
+	width: 19px;
+	height: 1px;
+	background-color: #ccc;
+	position: absolute;
+	left: 100%;
+	margin-left: 9px;
+	content: '';
+	top: 50%;
+}
+.awilo_fn_about .about_social ul li:last-child{
+	margin-right: 0;
+}
+.awilo_fn_about .about_social ul li:last-child:after{
+	display: none;
+}
+.awilo_fn_about .about_social a{
+	text-decoration: none;
+	color: #ccc;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Muli';
+	display: block;
+	transition: all .3s ease;
+}
+.awilo_fn_about .about_social a:hover{
+	color: #ae45ff;
+}
+.awilo_fn_about .about_right{
+	width: 50%;
+	position: relative;
+}
+.awilo_fn_about .about_right img{
+	opacity: 0;
+	min-width: 100%;
+}
+.awilo_fn_about .about_right .about_border{
+	padding: 30px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.awilo_fn_about .about_right .about_img{
+	padding: 30px;
+	width: 100%;
+	position: relative;
+	z-index: 5;
+}
+.awilo_fn_about .about_right .about_img .awilo_fn_abs_img{
+	left: 30px;
+	right: 30px;
+	top: 30px;
+	bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+.awilo_fn_about .about_right .about_border:after{
+	content: '';
+	position: absolute;
+	width: 30%;
+	top: 0;
+	left: 0;
+	background-color: #1e1427;
+	bottom: 0;
+}
+.awilo_fn_about .about_right .about_border:before{
+	content: '';
+	position: absolute;
+	width: 30%;
+	top: 0;
+	right: 0;
+	background-color: #1e1427;
+	bottom: 0;
+}
+#about{
+	padding: 160px 0 80px 0;
+}
+/*---------------------------------------------------*/
+/*	04) Shortcode: Divider
+/*---------------------------------------------------*/
+.awilo_fn_divider{
+	width: 100%;
+	position: relative;
+	height: 1px;
+	background-color: rgba(255,255,255,.05);
+	float: left;
+	clear: both;
+}
+/*---------------------------------------------------*/
+/*	05) Shortcode: Title
+/*---------------------------------------------------*/
+.awilo_fn_title{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_title h5{
+	margin: 0;
+	padding: 0;
+	font-family: 'Muli';
+	font-size: 18px;
+	color: #ae45ff;
+	letter-spacing: 0;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+.awilo_fn_title h3{
+	margin: 0;
+	padding: 0;
+	font-size: 72px;
+	line-height: 80px;
+	color: #eee;
+	letter-spacing: -0.25px;
+	font-family: 'Rubik';
+	font-weight: 400;
+}
+
+
+#information .awilo_fn_title{
+	margin-bottom: 100px;
+}
+/*---------------------------------------------------*/
+/*	06) Shortcode: Service
+/*---------------------------------------------------*/
+.awilo_fn_services{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_services ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	margin-left: -30px;
+	min-width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.awilo_fn_services ul li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 33.3333%;
+	padding-left: 30px;
+	padding-top: 16px;
+	margin-bottom: 30px;
+}
+.awilo_fn_services .s_item{
+	width: 100%;
+	float: left;
+	clear: both;
+	height: 100%;
+	border-radius: 5px;
+	border: 4px solid rgba(255,255,255,.05);
+	padding: 100px 44px 60px 44px;
+	position: relative;
+	transition: all .3s ease;
+}
+.awilo_fn_services .s_item:hover{
+	border-color: rgba(255,255,255,.15);
+	transform: translate3d(0px,-5px,0px);
+}
+.awilo_fn_services .s_item .s_counter{
+	width: 50px;
+	height: 90px;
+	display: block;
+	left: 46px;
+	top: -16px;
+	position: absolute;
+	background-color: #1e1427;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.awilo_fn_services .s_item .s_counter span{
+	color: #eee;
+	font-size: 16px;
+	line-height: 34px;
+	font-family: 'Muli';
+	width: 100%;
+	max-width: 100%;
+	padding: 0 2px;
+	position: absolute;
+	bottom: 0;
+	letter-spacing: 0;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.awilo_fn_services .s_item h3{
+	margin: 0;
+	padding: 0;
+	font-family: 'Rubik';
+	color: #eee;
+	font-size: 24px;
+	letter-spacing: 0;
+	font-weight: 400;
+	margin-bottom: 24px;
+}
+.awilo_fn_services .s_item p{
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	margin: 0;
+	padding: 0;
+	color: #777;
+	font-family: 'Muli';
+	margin-bottom: 27px;
+}
+.awilo_fn_services .s_item .s_btn a{
+	display: block;
+	float: left;
+	font-size: 16px;
+	color: #ae45ff;
+	line-height: 24px;
+	text-decoration: none;
+}
+#information .awilo_fn_services{
+	margin-bottom: 100px;
+}
+/*---------------------------------------------------*/
+/*	07) Shortcode: Skills
+/*---------------------------------------------------*/
+.awilo_fn_skills{
+	width: 100%;
+	float: left;
+	clear: both;
+	max-width: 808px;
+	transform: translateZ(0);
+}
+.awilo_fn_skills .s_title{
+	margin-bottom: 46px;
+}
+.awilo_fn_skills .s_title h3{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	color: #eee;
+	line-height: 40px;
+	font-weight: 400;
+	font-family: 'Muli';
+}
+.awilo_fn_skills .s_list ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.awilo_fn_skills .s_list{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_skills .s_list ul li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.awilo_fn_skills .s_list .sl_item{
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 0 20px;
+	height: 45px;
+	line-height: 45px;
+	border: 1px solid rgba(255,255,255,.1);
+	border-radius: 3px;
+	font-family: 'Muli';
+	font-size: 16px;
+	color: #eeeeee;
+	letter-spacing: 0;
+}
+.awilo_fn_skills .s_list .sl_item label{
+	min-width: inherit;
+    margin-right: 40px;
+    position: relative;
+    font-weight: 300;
+    display: block;
+	float: left;
+}
+.awilo_fn_skills .s_list .sl_item .text{
+	color: #777;
+}
+.awilo_fn_skills .s_list .sl_item label:after{
+	content: '';
+    width: 20px;
+    height: 1px;
+    background-color: #ae45ff;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 10px;
+    margin-top: -1px;
+}
+
+
+#information{
+	padding: 193px 0 180px 0;
+}
+
+
+
+
+#portfolio .awilo_fn_title{
+	margin-bottom: 100px;
+}
+
+/*---------------------------------------------------*/
+/*	08) Shortcode: Portfolio Grid
+/*---------------------------------------------------*/
+.awilo_fn_portfolio_grid{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_portfolio_grid ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-left: -70px;
+}
+.awilo_fn_portfolio_grid ul li{
+	width: 33.3333%;
+	float: left;
+	margin-bottom: 70px;
+	padding-left: 70px;
+}
+.awilo_fn_portfolio_grid ul li.tmwide25{width: 25%;}
+.awilo_fn_portfolio_grid ul li.tmwide33{width: 33.3333%;}
+.awilo_fn_portfolio_grid ul li.tmwide50{width: 50%;}
+.awilo_fn_portfolio_grid ul li.tmwide66{width: 66.6666%;}
+.awilo_fn_portfolio_grid ul li.tmwide75{width: 75%;}
+.awilo_fn_portfolio_grid ul li.tmwide100{width: 100%;}
+
+.awilo_fn_portfolio_grid .list_item{
+	border-radius: 5px;
+}
+.awilo_fn_portfolio_grid .list_item,
+.awilo_fn_portfolio_grid .list_item .img_holder{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	overflow: hidden;
+}
+.awilo_fn_portfolio_grid .list_item .img_holder img{
+	min-width: 100%;
+	opacity: 40%;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder{
+	width: 500px;
+	max-width: 88%;
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0) scale(0.6);
+	padding: 33px 20px;
+	text-align: center;
+	opacity: 0;
+	transition: transform .4s ease, opacity 0.6s ease;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder .title_abs{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	transform: scale(1.25) translateZ(0);
+	transition: all 1.4s ease;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder .title_abs div{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	border-radius: 5px;
+	position: absolute !important;
+}
+.awilo_fn_portfolio_grid .list_item:hover .title_holder{
+	transform: translate3d(-50%,-50%,0) scale(1);
+	opacity: 1;
+}
+.awilo_fn_portfolio_grid .list_item:hover .title_holder .title_abs{
+	transform: scale(1) translateZ(0);
+}
+.awilo_fn_portfolio_grid .list_item .title_cat,
+.awilo_fn_portfolio_grid .list_item .title_name{
+	transition: all .3s ease;
+}
+.awilo_fn_portfolio_grid .list_item:hover .title_cat,
+.awilo_fn_portfolio_grid .list_item:hover .title_name{
+	transform: translateZ(100px) !important;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder p{
+	margin: 0;
+	padding: 0;
+	color: #bbb;
+	font-family: 'Muli';
+	font-size: 16px;
+	letter-spacing: 0;
+	margin-bottom: 4px;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder p a{
+	text-decoration: none;
+	color: inherit;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder p a:after{
+	background-color: #bbb;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder h3{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-family: 'Rubik';
+	letter-spacing: 0;
+	font-weight: 400;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder h3 a{
+	color: #eee;
+	text-decoration: none;
+	transition: all .3s ease;
+}
+.awilo_fn_portfolio_grid .list_item .title_holder h3 a:hover{
+	color: #ae45ff;
+}
+.awilo_fn_portfolio_grid ul li.tmwide50 .list_item .title_holder h3,
+.awilo_fn_portfolio_grid ul li.tmwide66 .list_item .title_holder h3,
+.awilo_fn_portfolio_grid ul li.tmwide75 .list_item .title_holder h3,
+.awilo_fn_portfolio_grid ul li.tmwide100 .list_item .title_holder h3{
+	font-size: 30px;
+}
+
+/*---------------------------------------------------*/
+/*	09) Shortcode: Contact me
+/*---------------------------------------------------*/
+.awilo_fn_contactme{
+	width: 100%;
+	float: left;
+	clear: both;
+	max-width: 610px;
+	margin-bottom: 120px;
+	margin-top: 42px;
+}
+.awilo_fn_contactme p{
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	line-height: 30px;
+	color: #777;
+	letter-spacing: 0;
+}
+.awilo_fn_contactme p.text{
+	margin-bottom: 43px;
+}
+/*---------------------------------------------------*/
+/*	10) Shortcode: Experience
+/*---------------------------------------------------*/
+.awilo_fn_experience,
+.awilo_fn_experience .e_list,
+.awilo_fn_experience .e_title{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_experience .e_title h3{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	line-height: 40px;
+	color: #eee;
+	letter-spacing: 0;
+	font-family: 'Muli';
+	font-weight: 400;
+	margin-bottom: 31px;
+}
+.awilo_fn_experience .e_list ul,
+.awilo_fn_experience .e_list li{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.awilo_fn_experience .e_list .e_item{
+	padding: 22px 0 23px;
+	width: 100%;
+	float: left;
+	clear: both;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.awilo_fn_experience .e_list .e_item span{
+	width: 33.3333%;
+	float: left;
+	padding-right: 10px;
+	font-size: 18px;
+	letter-spacing: 0;
+	color: #777;
+}
+.awilo_fn_experience .e_list .e_item span.e_item_b{
+	color: #eee;
+}
+.awilo_fn_experience .e_list ul li:last-child .e_item{
+	padding-bottom: 10px;
+	border-bottom: none;
+}
+/*---------------------------------------------------*/
+/*	11) Shortcode: Review
+/*---------------------------------------------------*/
+.awilo_fn_reviews{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 98px;
+}
+.awilo_fn_reviews .r_title h3{
+	margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+    color: #eee;
+    letter-spacing: 0;
+    font-family: 'Muli';
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+.awilo_fn_reviews .r_item{
+	padding-top: 16px;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_reviews .r_item .r_desc,
+.awilo_fn_reviews .r_item .r_item_in,
+.awilo_fn_reviews .r_item .r_reviewer{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_reviews .r_item .r_item_in{
+	border: 4px solid rgba(255,255,255,.05);
+	border-radius: 5px;
+	position: relative;
+	padding: 113px 45px 45px 45px;
+}
+.awilo_fn_reviews .r_item:hover{
+	transform: translate3d(0px,-5px,0px);
+}
+.awilo_fn_reviews .r_item:hover .r_item_in{
+	border-color: rgba(255,255,255,.15);
+}
+
+.awilo_fn_reviews .r_item .r_quote{
+	width: 50px;
+    height: 90px;
+    display: block;
+    left: 46px;
+    top: -16px;
+    position: absolute;
+    background-color: #1e1427;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.awilo_fn_reviews .r_item .r_quote .awilo_fn_svg{
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	bottom: 14px;
+	left: 50%;
+	margin-left: -14px;
+	color: #ae45ff;
+}
+.awilo_fn_reviews .r_item .r_review{
+	margin-bottom: 32px;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_reviews .r_item .r_desc p{
+	margin: 0;
+	padding: 0;
+	font-family: 'Muli';
+	letter-spacing: 0;
+	font-size: 16px;
+	line-height: 24px;
+	
+}
+.awilo_fn_reviews .r_item .r_desc{
+	margin-bottom: 44px;
+}
+.awilo_fn_reviews .r_item .r_reviewer{
+	display: flex;
+	flex-direction: column;
+	min-height: 70px;
+	justify-content: center;
+}
+.awilo_fn_reviews .r_item .r_reviewer{
+	padding-left: 90px;
+	position: relative;
+}
+.awilo_fn_reviews .r_item .r_reviewer .abs_img{
+	width: 70px;
+	height: 70px;
+	display: block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 100%;
+}
+.awilo_fn_reviews .r_item .r_reviewer h3{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #eee;
+	letter-spacing: 0;
+	font-family: 'Rubik';
+	font-weight: 400;
+	margin-bottom: 3px;
+}
+.awilo_fn_reviews .r_item .r_reviewer h5{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #777;
+	letter-spacing: 0;
+	font-family: 'Muli';
+	font-weight: 400;
+}
+.awilo_fn_reviews .swiper-wrapper{
+	margin-bottom: 45px;
+}
+.awilo_fn_reviews .r_item{
+	opacity: .3;
+	transition: all .5s ease;
+}
+.awilo_fn_reviews .r_item.fn_vision{
+	opacity: 1;
+}
+.awilo_fn_reviews.ready .swiper-container{
+	overflow: visible;
+}
+.awilo_fn_swiper_progress{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_swiper_progress .my_pagination_in{
+	float: left;
+	position: relative;
+}
+.awilo_fn_swiper_progress span{
+	display: block;
+	float: left;
+	font-size: 18px;
+	font-family: 'Muli';
+	letter-spacing: 0;
+	color: #eee;
+	height: 22px;
+	line-height: 22px;
+}
+.awilo_fn_swiper_progress .pagination_progress{
+	width: 100px;
+	margin: 0 20px;
+	position: relative;
+}
+.awilo_fn_swiper_progress .pagination_progress .all{
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	top: 50%;
+	left: 0;
+	background-color: #333;
+}
+.awilo_fn_swiper_progress .pagination_progress .all span{
+	height: 1px;
+	width: 100%;
+	background-color: #777;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	transform-origin: left top;
+	transform: scale(0);
+	transition: all .3s ease;
+}
+
+
+#portfolio{
+	padding: 193px 0 195px 0;
+}
+/*---------------------------------------------------*/
+/*	12) 5 stars
+/*---------------------------------------------------*/
+.awilo_fn_review{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_review .review_in{
+	width: 100px;
+	height: 20px;
+	position: relative;
+	overflow: hidden;
+}
+.awilo_fn_review .awilo_fn_svg{
+	width: 100px;
+	height: 20px;
+	display: block;
+}
+.awilo_fn_review .rating_relative{
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}
+.awilo_fn_review .rating_absolute{
+	position: absolute;
+	z-index: 5;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+.awilo_fn_review .rating_relative .awilo_fn_svg{
+	
+}
+.awilo_fn_review .rating_absolute .awilo_fn_svg{
+	color: #ffba00;
+}
+/*---------------------------------------------------*/
+/*	13) Shortcode: Blog List
+/*---------------------------------------------------*/
+.awilo_fn_blog_list{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 79px;
+}
+.awilo_fn_blog_list li,
+.awilo_fn_blog_list ul{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.awilo_fn_blog_list .blog_item{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	padding: 50px 0;
+}
+.awilo_fn_blog_list .blog_item:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,.1);
+	height: 1px;
+}
+.awilo_fn_blog_list li:last-child .blog_item:after{
+	display: none;
+}
+.awilo_fn_blog_list .blog_item_in{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	padding-left: 280px;
+}
+.awilo_fn_blog_list .blog_item .b_counter{
+	width: 100px;
+	height: 100px;
+	display: block;
+	padding: 0 5px;
+	text-align: center;
+	line-height: 100px;
+	border-radius: 100%;
+	background-color: #1e1427;
+	font-family: 'Rubik';
+	font-size: 30px;
+	letter-spacing: 0;
+	margin: 0;
+	color: #ae45ff;
+	font-weight: 400;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.awilo_fn_blog_list .blog_item .b_counter:after{
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 2px;
+	left: 100%;
+	margin-left: 50px;
+	top: 50%;
+	margin-top: -1px;
+	background-color: rgba(255,255,255,.1);
+	display: block;
+}
+.awilo_fn_blog_list .title_wrapper{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	padding-right: 50px;
+	padding-left: 170px;
+	min-height: 100px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.awilo_fn_blog_list .title_wrapper .abs_img{
+	width: 120px;
+	height: 100px;
+	position: absolute;
+	border-radius: 5px;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.awilo_fn_blog_list .title_wrapper .b_arrow{
+	width: 50px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.awilo_fn_blog_list .title_wrapper .b_arrow a{
+	text-decoration: none;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.awilo_fn_blog_list .title_wrapper .b_arrow .awilo_fn_svg{
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 0;
+	color: #fff;
+	transition: all .3s ease;
+}
+.awilo_fn_blog_list .title_wrapper .title_holder p{
+	font-family: 'Muli';
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	letter-spacing: 0;
+	margin-bottom: 3px;
+	color: #777;
+}
+.awilo_fn_blog_list .title_wrapper .title_holder h3{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	font-family: 'Rubik';
+	letter-spacing: 0;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.awilo_fn_blog_list .title_wrapper .title_holder h3 a{
+	color: #eee;
+	text-decoration: none;
+	font-family: inherit;
+	letter-spacing: inherit;
+	font-weight: inherit;
+}
+.awilo_fn_blog_list .title_wrapper .b_arrow .awilo_fn_svg,
+.awilo_fn_blog_list .title_wrapper,
+.awilo_fn_blog_list .title_wrapper .abs_img,
+.awilo_fn_blog_list .blog_item .b_counter,
+.awilo_fn_blog_list .title_wrapper .title_holder h3 a,
+.awilo_fn_blog_list .title_wrapper .title_holder p,
+.awilo_fn_blog_list .blog_item .blog_item_in{
+	transform: translate3d(0px,0px,0px);
+-webkit-transition: all 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+   -moz-transition: all 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+     -o-transition: all 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        transition: all 560ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+}
+.awilo_fn_blog_list .title_wrapper .abs_img{
+	height: auto;
+	min-height: 100px;
+}
+@media(min-width:769px){
+	.awilo_fn_blog_list .blog_item:hover .title_wrapper .title_holder p{
+		color: #bbb;
+	}
+	.awilo_fn_blog_list .blog_item:hover .title_wrapper .b_arrow .awilo_fn_svg,
+	.awilo_fn_blog_list .blog_item:hover .title_wrapper .title_holder h3 a{
+		color: #ae45ff;
+	}
+	.awilo_fn_blog_list .blog_item:hover .b_counter{
+		transform: translate3d(0px,0px,0px) scale(0);
+	}
+	.awilo_fn_blog_list .blog_item:hover .blog_item_in{
+		padding-left: 0;
+	}
+	.awilo_fn_blog_list .blog_item:hover .title_wrapper{
+		padding-left: 300px;
+	}
+	.awilo_fn_blog_list .blog_item:hover .title_wrapper .abs_img{
+		width: 240px;
+		top: -49px;
+		bottom: -49px;
+		border-radius: 0;
+	}
+}
+#blog{
+	padding: 193px 0 150px 0;
+}
+/*---------------------------------------------------*/
+/*	14) Shortcode: Contact Form
+/*---------------------------------------------------*/
+.awilo_fn_contact_form{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 130px;
+	margin-bottom: 133px;
+}
+
+.awilo_fn_contact_form .empty_notice{
+	display: none; 
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 0 20px;
+    background-color: transparent;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 60px;
+    border-radius: 5px;
+    border: 2px solid #ff214f24;
+    color: #ff214f;
+}
+.awilo_fn_contact_form textarea,
+.awilo_fn_contact_form input[type="email"],
+.awilo_fn_contact_form input[type="text"]{
+	margin: 0;
+	outline-color: transparent;
+	outline-width: 0;
+	box-shadow: none !important;
+	padding: 15px 20px;
+	border-radius: 3px;
+	border:  2px solid rgba(255,255,255,0.05);
+	width: 100%;
+	line-height: 1;
+	font-size: 18px;
+	letter-spacing: 0;
+	font-family: 'Muli';
+	color: #777;
+	background-color: transparent;
+	margin-bottom: 40px;
+}
+.awilo_fn_contact_form input[type="email"],
+.awilo_fn_contact_form input[type="text"]{
+	min-height: 60px;
+}
+/*---------------------------------------------------*/
+/*	15) Shortcode: Info List
+/*---------------------------------------------------*/
+.awilo_fn_info_list{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_info_list ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-left: -20px;
+}
+.awilo_fn_info_list li{
+	width: 33.3333%;
+	float: left;
+	padding-left: 20px;
+	margin: 10px 0;
+}
+.awilo_fn_info_list li p{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #777;
+	font-family: 'Muli';
+	letter-spacing: 0;
+	font-weight: 400;
+	margin-bottom: 7px;
+}
+.awilo_fn_info_list li h3{
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0;
+	font-family: 'Rubik';
+	color: #eee;
+	font-weight: 400;
+}
+.awilo_fn_info_list li h3 a{
+	text-decoration: none;
+	color: inherit;
+}
+.awilo_fn_info_list li h3 a:after{
+	background-color: #eee;
+}
+
+#contact{
+	padding: 193px 0 181px 0;
+}
+/*---------------------------------------------------*/
+/*	16) Shortcode: Big List
+/*---------------------------------------------------*/
+.awilo_fn_big_text{
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 211px 0;
+	background-color: #1e1427;
+}
+.awilo_fn_big_text h3{
+	margin: 0;
+	padding: 0;
+	max-width: 745px;
+	font-size: 72px;
+	line-height: 80px;
+	letter-spacing: -0.25px;
+	font-family: 'Rubik';
+	font-weight: 400;
+	color: #eee;
+}
+/*---------------------------------------------------*/
+/*	17) To Top
+/*---------------------------------------------------*/
+.awilo_fn_totop{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	right: 50px;
+	cursor: pointer;
+	display: block;
+	border-radius: 4px;
+	background-color: #352c3d;
+	margin-top: -15px;
+	transition: all .3s ease;
+}
+.awilo_fn_totop:hover{
+	background-color: #0e0e0f;
+}
+.awilo_fn_totop:after{
+	content: '';
+	position: absolute;
+	width: 7px;
+	height: 1px;
+	height: 1.5px;
+	background-color: #eee;
+	transform: rotate(45deg);
+	top: 15px;
+	left: 14px;
+}
+.awilo_fn_totop:before{
+	content: '';
+	position: absolute;
+	width: 7px;
+	height: 1px;
+	height: 1.5px;
+	background-color: #eee;
+	transform: rotate(-45deg);
+	top: 15px;
+	right: 14px;
+}
+/*---------------------------------------------------*/
+/*	18) Footer
+/*---------------------------------------------------*/
+.awilo_fn_footer{
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 66px 0;
+	position: relative;
+	background-color: #1e1427;
+	border-top: 1px solid rgba(255,255,255,.1);
+}
+.awilo_fn_footer p{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	letter-spacing: -0.25px;
+	color: #eee;
+	font-family: 'Muli';
+}
+/*---------------------------------------------------*/
+/*	19) Shortcode: Video
+/*---------------------------------------------------*/
+.awilo_fn_video{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	padding: 330px 0;
+	overflow: hidden;
+}
+.awilo_fn_video .jarallax{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.awilo_fn_video .video_holder{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	z-index: 5;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.awilo_fn_video .video_inner{
+	float: left;
+	padding-right: 100px;
+	position: relative;
+}
+.awilo_fn_video .video_inner a{
+	display: block;
+	padding: 40px 80px 40px 90px;
+	text-decoration: none;
+	color: #ebebeb;
+	font-size: 30px;
+	font-family: 'Rubik';
+	line-height: 60px;
+	font-weight: 400;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-color: #1e1427;
+	position: relative;
+}
+.awilo_fn_video .video_inner a:after{
+	content: '';
+	position: absolute;
+	right: 100%;
+	top: 0;
+	bottom: 0;
+	width: 4000px;
+	background-color: #1e1427;
+}
+.awilo_fn_video .video_inner:before{
+	content: '';
+	position: absolute;
+	width: 120px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: rgba(174,69,255,.1);
+}
+.awilo_fn_video .video_inner .icon{
+	width: 60px;
+	height: 60px;
+	border: 4px solid rgba(255,255,255,.5);
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 0;
+	border-radius: 100%;
+}
+.awilo_fn_video .video_inner .icon:after{
+	border: 8px solid transparent;
+	border-left-width: 14px;
+	position: absolute;
+	content: '';
+	border-left-color: #ebebeb;
+	top: 50%;
+	margin-top: -8px;
+	left: 50%;
+	margin-left: -5px;
+}
+/*---------------------------------------------------*/
+/*	20) Fade Transition for magnific popup
+/*---------------------------------------------------*/
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+/*---------------------------------------------------*/
+/*	21) Shortcode: Partners
+/*---------------------------------------------------*/
+.awilo_fn_partners,
+.awilo_fn_partners .p_title,
+.awilo_fn_partners .p_list{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_partners .p_title h3{
+	margin: 0;
+	padding: 0;
+}
+.awilo_fn_partners .p_title h3{
+	margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+    color: #eee;
+    letter-spacing: 0;
+    font-family: 'Muli';
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+.awilo_fn_partners .r_item{
+	padding-top: 16px;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.awilo_fn_partners .flip__wrapper{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	height: 250px;
+	perspective: 1000px; 
+}
+.awilo_fn_partners .flip__front{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 4px solid rgba(255,255,255,.05);
+	border-radius: 5px;
+	padding: 30px 20px;
+}
+.awilo_fn_partners .flip__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.awilo_fn_partners .flip__front,
+.awilo_fn_partners .flip__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+.awilo_fn_partners .flip__back{
+	background-color: #1e1427;
+	transform: rotateY(180deg);
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	padding: 0 10px;
+	justify-content: center;
+	align-items: center;
+}
+.awilo_fn_partners .flip__back a{
+	position: absolute;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+.awilo_fn_partners .flip__back span{
+	font-family: 'Muli';
+	font-size: 18px;
+	color: #eee;
+}
+
+.awilo_fn_partners .flip__wrapper:hover .flip__inner{
+  transform: rotateY(180deg);
+}
+
+.awilo_fn_partners .flip__wrapper:hover .r_plus{
+	opacity: 0;
+}
+.awilo_fn_partners .r_plus{
+	width: 50px;
+    height: 90px;
+    display: block;
+    left: 46px;
+    top: -16px;
+    position: absolute;
+    background-color: #1e1427;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+	transition: all .3s ease;
+}
+.awilo_fn_partners .r_plus span{
+	display: block;
+	width: 16px;
+	height: 16px;
+	bottom: 16px;
+	left: 50%;
+	margin-left: -8px;
+	position: absolute;
+}
+.awilo_fn_partners .r_plus span:after{
+	width: 16px;
+	height: 2px;
+	top: 50%;
+	margin-top: -1px;
+	position: absolute;
+	content: '';
+	left: 0;
+	background-color: #ae45ff;
+}
+.awilo_fn_partners .r_plus span:before{
+	width: 2px;
+	height: 16px;
+	left: 50%;
+	margin-left: -1px;
+	position: absolute;
+	content: '';
+	top: 0;
+	background-color: #ae45ff;
+}
+.awilo_fn_partners .r_item{
+	opacity: .3;
+	transition: all .5s ease;
+}
+.awilo_fn_partners .r_item.fn_vision{
+	opacity: 1;
+}
+.awilo_fn_partners.ready .swiper-container{
+	overflow: visible;
+}
+.awilo_fn_partners .swiper-wrapper{
+	margin-bottom: 45px;
+}
+#partners{
+	padding: 191px 0 195px 0;
+}
+/*---------------------------------------------------*/
+/*	22) Responsive
+/*---------------------------------------------------*/
+/* RESPONSIVE */
+/* TABLET, MOBILE DEVICES */
+@media(max-width: 1460px){
+	.awilo_fn_header{
+		max-width: 1440px;
+		padding: 5px 40px;
+		margin: 0 auto;
+	}
+}
+@media(max-width: 1250px){
+	.awilo_fn_about .about_in{
+		flex-direction: column;
+	}
+	.awilo_fn_about .about_left{
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 100px;
+	}
+	#information{
+		padding: 93px 0 80px 0;
+	}
+	.awilo_fn_services ul li{
+		width: 50%;
+	}
+	#portfolio{
+		padding: 93px 0 95px 0;
+	}
+	#blog{
+		padding: 93px 0 50px 0;
+	}
+	#contact{
+		padding: 93px 0 81px 0;
+	}
+	#partners{
+		padding: 91px 0 95px 0;
+	}
+}
+@media(max-width: 1040px){
+	.awilo_fn_header{
+		padding: 5px 20px;
+	}
+	.awilo_fn_footer .container{
+		padding-right: 45px;
+	}
+	.awilo_fn_totop{
+		right: 10px;
+	}
+	.awilo_fn_about .about_left h3,
+	.awilo_fn_title h3{
+		font-size: 40px;
+		line-height: 1.1;
+	}
+	.awilo_fn_portfolio_grid ul{
+		margin-left: -20px;
+	}
+	.awilo_fn_portfolio_grid ul li{
+		padding-left: 20px;
+		margin-bottom: 20px;
+	}
+	.awilo_fn_portfolio_grid .list_item .title_holder{
+		opacity: 1;
+		transform: none !important;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		max-width: 100%;
+		top: auto;
+	}
+	.awilo_fn_portfolio_grid .list_item .title_holder .title_abs{
+		transform: scale(1) !important;
+	}
+	.awilo_fn_portfolio_grid .list_item .title_holder .title_abs div{
+		transform: translate(0px,0px) !important;
+		border-radius: 0;
+	}
+	.awilo_fn_blog_list .blog_item_in{
+		padding-left: 0;
+	}
+	.awilo_fn_blog_list .blog_item .b_counter{
+		display: none;
+	}
+}
+@media(max-width: 768px){
+	.awilo_fn_wrapper.opened .awilo_fn_content{
+		padding-right: 0;
+	}
+	.awilo_fn_sidebar_header{
+		width: 100%;
+		right: -100%;
+	}
+	.awilo_fn_info_list li{
+		width: 100%;
+	}
+	.awilo_fn_blog_list .blog_item{
+		padding: 30px 0;
+	}
+	.awilo_fn_blog_list .title_wrapper .b_arrow{display: none;}
+	.awilo_fn_blog_list .title_wrapper{
+		padding-left: 120px;
+		padding-right: 0;
+	}
+	.awilo_fn_blog_list .title_wrapper .abs_img{
+		width: 100px;
+		min-height: 80px;
+	}
+	.awilo_fn_services ul li{width: 100%;}
+	.awilo_fn_about .about_right{
+		width: 100%
+	}
+	.awilo_fn_portfolio_grid ul li{
+		width: 100% !important;
+	}
+	.awilo_fn_experience .e_list .e_item span{
+		width: 100%;
+		margin: 2px 0;
+	}
+}
+@media(max-width: 480px){
+	.awilo_fn_header{
+		padding: 5px 10px;
+	}
+	.awilo_fn_blog_list .title_wrapper .title_holder h3{font-size: 24px;}
+	.awilo_fn_title h3{
+		font-size: 30px;
+	}
+}
