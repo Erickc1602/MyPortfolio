@@ -8,7 +8,7 @@ import "../css/fontello.css";
 import "../css/magnific-popup.css";
 import "../css/style.css";
 import "../css/swiper.css";
-import me from "./Img/33293743410_d9c5f43d7d_k.jpg";
+import me from "./Img/me.jpg";
 
 const AboutMe = () => {
   return (
@@ -25,7 +25,7 @@ const AboutMe = () => {
                       {" "}
                       I am <br />
                       Erick De Carvalho, <br />
-                      Full-Stack Web Dev.
+                      Full-Stack Web Developer
                     </h3>
                   </div>
                   <div class="about_desc">
@@ -68,18 +68,13 @@ const AboutMe = () => {
                   </div>
                 </div>
               </div>
-              <div class="about_right">
-                <div class="r_inner" id="scene">
-                  <div class="layer about_img" data-depth="0.5">
-                    <img src="img/thumb/thumb-600-700.jpg" alt="" />
-                    <div class="awilo_fn_abs_img" data-bg-img=""></div>
-                  </div>
-                  <div class="awilo_fn_abs_img" data-bg-img={me}></div>
-                  <div class="layer about_border" data-depth="0.3">
-                    <img src="img/thumb/thumb-600-700.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
+              <div class="about_right"></div>
+              <img
+                alt="me"
+                src={me}
+                style={{ width: 600, height: 500, marginRight: 200 }}
+              />
+              ;
             </div>
           </div>
         </div>

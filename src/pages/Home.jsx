@@ -14,7 +14,6 @@ const Home = () => {
         <AboutMe />
       </div>
       <div class="awilo_fn_divider"></div>
-
       <Portfolio />
     </div>
   );

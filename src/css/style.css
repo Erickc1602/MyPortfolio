@@ -431,8 +431,8 @@ a.awilo_fn_circle_link:hover:after{
 	flex-direction: row;
 }
 .awilo_fn_about .about_left{
-	width: 50%;
-	padding-right: 7%;
+	width: 80%;
+	padding-right: 2%;
 }
 .awilo_fn_about .about_left .l_inner{
 	width: 100%;
@@ -2042,10 +2042,10 @@ a.awilo_fn_circle_link:hover:after{
 	}
 	.awilo_fn_services ul li{width: 100%;}
 	.awilo_fn_about .about_right{
-		width: 100%
+		width: 50%
 	}
 	.awilo_fn_portfolio_grid ul li{
-		width: 100% !important;
+		width: 50% 
 	}
 	.awilo_fn_experience .e_list .e_item span{
 		width: 100%;
