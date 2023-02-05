@@ -74,7 +74,6 @@ const AboutMe = () => {
                 src={me}
                 style={{ width: 600, height: 500, marginRight: 200 }}
               />
-              ;
             </div>
           </div>
         </div>
