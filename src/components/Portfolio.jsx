@@ -97,7 +97,7 @@ const Portfolio = () => {
                   </div>
                 </li>
               </Link>
-              <Link to="https://braziledc.netlify.app/">
+              <Link to="https://brazilwc.netlify.app/">
                 <li class="awilo_fn_masonry_in">
                   <div class="list_item">
                     <div class="img_holder">
@@ -111,14 +111,14 @@ const Portfolio = () => {
                       <div class="title_cat">
                         <p>
                           <a
-                            href="https://braziledc.netlify.app/"
+                            href="https://brazilwc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
                             Old Internet
                           </a>
                           <span class="sep">/</span>
                           <a
-                            href="https://braziledc.netlify.app/"
+                            href="https://brazilwc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
                             HTML
@@ -127,9 +127,7 @@ const Portfolio = () => {
                       </div>
                       <div class="title_name">
                         <h3>
-                          <a href="https://braziledc.netlify.app/">
-                            Brazil W.C
-                          </a>
+                          <a href="https://brazilwc.netlify.app/">Brazil W.C</a>
                         </h3>
                       </div>
                     </div>

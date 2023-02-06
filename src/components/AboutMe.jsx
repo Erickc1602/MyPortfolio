@@ -41,7 +41,10 @@ const AboutMe = () => {
                     </p>
                   </div>
                   <div class="about_btn">
-                    <a href="/" class="awilo_fn_main_button">
+                    <a
+                      href="https://drive.google.com/file/d/16k7CfuBh-NgQ3YV_a0yvQlP7eefKXlfH/view?usp=share_link"
+                      class="awilo_fn_main_button"
+                    >
                       <span>Download CV</span>
                       <span>Download CV</span>
                     </a>
@@ -60,6 +63,7 @@ const AboutMe = () => {
                           Github
                         </Link>
                       </li>
+
                       <li>
                         <MailIcon />
                         ecarv97@gmail.com
