@@ -42,13 +42,14 @@ const AboutMe = () => {
                   </div>
                   <div class="about_btn">
                     <a
-                      href="https://drive.google.com/file/d/16k7CfuBh-NgQ3YV_a0yvQlP7eefKXlfH/view?usp=share_link"
+                      href="https://drive.google.com/file/d/16k7CfuBh-NgQ3YV_a0yvQlP7eefKXlfH/view?usp=sharing"
                       class="awilo_fn_main_button"
                     >
                       <span>Download CV</span>
                       <span>Download CV</span>
                     </a>
                   </div>
+                  <h3 style={{ fontSize: 30 }}>My Links:</h3>
                   <div class="about_social">
                     <ul>
                       <li>
@@ -63,7 +64,6 @@ const AboutMe = () => {
                           Github
                         </Link>
                       </li>
-
                       <li>
                         <MailIcon />
                         ecarv97@gmail.com

@@ -4,7 +4,7 @@ import "../css/fontello.css";
 import "../css/magnific-popup.css";
 import "../css/style.css";
 import "../css/swiper.css";
-import comingsoon from "../components/Img/coming-soon-2022-10-26-06-13-14-utc.jpg";
+
 import { Link } from "react-router-dom";
 import goated from "./Img/Screenshot (35).png";
 import RS from "./Img/Screenshot (36).png";
@@ -15,7 +15,7 @@ const Portfolio = () => {
     <>
       <div class="awilo_fn_title">
         <h5>Portfolio / Projects</h5>
-        <h3>Here, is some of my projects</h3>
+        <h3>Here are some of my projects:</h3>
       </div>
       <section id="portfolio">
         <div class="container wide">
@@ -40,14 +40,14 @@ const Portfolio = () => {
                             href="https://goatededc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
-                            Clothing
+                            .
                           </a>
-                          <span class="sep">/</span>
+                          <span class="sep"></span>
                           <a
                             href="https://goatededc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
-                            Website
+                            .
                           </a>
                         </p>
                       </div>
@@ -57,7 +57,21 @@ const Portfolio = () => {
                         </h3>
                       </div>
                     </div>
+                    <div></div>
                   </div>
+                  <h2 style={{ color: "gray" }}>Clothing Website </h2>
+                  <p style={{ color: "white" }}>
+                    This is a full-stack web application designed to showcase
+                    and sell clothing items. The website features a clean and
+                    user-friendly interface, making it easy for customers to
+                    browse and purchase items. <br />
+                    The website is built using the popular MERN stack, including
+                    MongoDB for data storage, Express for server-side logic,
+                    React for the front-end user interface, and Node.js for the
+                    back-end runtime environment. This technology stack provides
+                    a robust, scalable, and efficient platform for the website,
+                    ensuring smooth and seamless user experiences.
+                  </p>
                 </li>
               </Link>
               <Link to="https://realstateedc.netlify.app/">
@@ -77,14 +91,14 @@ const Portfolio = () => {
                             href="https://realstateedc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
-                            Real State
+                            .
                           </a>
-                          <span class="sep">/</span>
+                          <span class="sep"></span>
                           <a
                             href="https://realstateedc.netlify.app/"
                             class="awilo_fn_circle_link"
                           >
-                            Website
+                            .
                           </a>
                         </p>
                       </div>
@@ -95,6 +109,13 @@ const Portfolio = () => {
                       </div>
                     </div>
                   </div>
+                  <h2 style={{ color: "gray" }}>Real Estate website </h2>
+                  <p style={{ color: "white" }}>
+                    Designed to showcase properties and simplify the search
+                    process. Built with modern front-end technologies and a
+                    robust API, Browse a collection of properties and find your
+                    dream home with ease.
+                  </p>
                 </li>
               </Link>
               <Link to="https://brazilwc.netlify.app/">
@@ -132,44 +153,16 @@ const Portfolio = () => {
                       </div>
                     </div>
                   </div>
+                  <h2 style={{ color: "gray" }}>Brazil W.C </h2>
+                  <p style={{ color: "white" }}>
+                    Step into the world of Brazilian soccer with this portfolio
+                    project, a celebration of Brazil's world cup titles. Built
+                    using HTML and CSS, this website brings the old internet
+                    style to life, showcasing the country's glorious victories
+                    in the most prestigious tournament in world football.
+                  </p>
                 </li>
               </Link>
-
-              <li class="awilo_fn_masonry_in">
-                <div class="list_item">
-                  <div class="img_holder">
-                    <img src={comingsoon} alt="" />
-                    <div
-                      class="awilo_fn_abs_img"
-                      data-bg-img={comingsoon}
-                    ></div>
-                  </div>
-                  <Link to="">
-                    <div class="title_holder">
-                      <div class="title_abs">
-                        <div class="layer" data-depth="0.3"></div>
-                      </div>
-                      <div class="title_cat">
-                        <p>
-                          <a href="/" class="awilo_fn_circle_link">
-                            New
-                          </a>
-                          <span class="sep">/</span>
-                          <a href="/" class="awilo_fn_circle_link">
-                            Website
-                          </a>
-                        </p>
-                      </div>
-                      <div class="title_name">
-                        <h3>
-                          <a href="/">Coming Soon</a>
-                        </h3>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </li>
-              <li class="awilo_fn_masonry_in"></li>
             </ul>
           </div>
         </div>
