@@ -173,12 +173,12 @@ const Portfolio = () => {
           Did you like what you see above? Don’t hesitate, request for a new
           project or contact me. :)
         </p>
-        <p class="btn">
-          <a href="#contact" class="awilo_fn_main_button">
+        <a href="mailto:ecarv97@gmail.com" class="awilo_fn_main_button">
+          <p class="btn">
             <span>Contact Me</span>
             <span>Contact Me</span>
-          </a>
-        </p>
+          </p>
+        </a>
       </div>
     </>
   );
