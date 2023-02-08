@@ -42,7 +42,7 @@ const AboutMe = () => {
                   </div>
                   <div class="about_btn">
                     <a
-                      href="https://drive.google.com/file/d/16k7CfuBh-NgQ3YV_a0yvQlP7eefKXlfH/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1C92-Mg8QG8yvk_h0Y_oi-Y2GY7KHfHzA/view?usp=sharing"
                       class="awilo_fn_main_button"
                     >
                       <span>Download CV</span>
