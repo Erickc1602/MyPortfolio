@@ -83,6 +83,7 @@ const AboutMe = () => {
                   height: 400,
                   marginRight: 200,
                   borderRadius: 5,
+                  objectFit: "cover",
                 }}
               />
             </div>
