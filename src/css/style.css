@@ -432,7 +432,7 @@ a.awilo_fn_circle_link:hover:after{
 	flex-direction: row;
 }
 .awilo_fn_about .about_left{
-	width: 80%;
+	
 	padding-right: 2%;
 }
 .awilo_fn_about .about_left .l_inner{
@@ -773,6 +773,7 @@ a.awilo_fn_circle_link:hover:after{
 	clear: both;
 	max-width: 808px;
 	transform: translateZ(0);
+	margin-left: 32px;
 }
 .awilo_fn_skills .s_title{
 	margin-bottom: 46px;
@@ -849,7 +850,7 @@ a.awilo_fn_circle_link:hover:after{
 
 
 #portfolio .awilo_fn_title{
-	margin-bottom: 100px;
+	
 }
 
 /*---------------------------------------------------*/
@@ -1245,7 +1246,7 @@ a.awilo_fn_circle_link:hover:after{
 
 
 #portfolio{
-	padding: 193px 0 195px 0;
+	margin-top: 40px;
 }
 /*---------------------------------------------------*/
 /*	12) 5 stars
@@ -1961,7 +1962,7 @@ a.awilo_fn_circle_link:hover:after{
 		width: 50%;
 	}
 	#portfolio{
-		padding: 93px 0 95px 0;
+		margin-top: 50px;
 	}
 	#blog{
 		padding: 93px 0 50px 0;

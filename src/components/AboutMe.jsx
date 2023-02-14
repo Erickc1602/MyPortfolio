@@ -78,7 +78,12 @@ const AboutMe = () => {
               <img
                 alt="me"
                 src={me}
-                style={{ width: 600, height: 500, marginRight: 200 }}
+                style={{
+                  width: 400,
+                  height: 400,
+                  marginRight: 200,
+                  borderRadius: 5,
+                }}
               />
             </div>
           </div>

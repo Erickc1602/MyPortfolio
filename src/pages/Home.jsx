@@ -13,10 +13,10 @@ const Home = () => {
     <div class="awilo_fn_wrapper">
       <div class="awilo_fn_content">
         <AboutMe />
+        <Skills />
+        <div class="awilo_fn_divider"></div>
+        <Portfolio />
       </div>
-      <Skills />
-      <div class="awilo_fn_divider"></div>
-      <Portfolio />
     </div>
   );
 };
